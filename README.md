@@ -26,8 +26,7 @@ To run the CLI Cash Register, follow these steps:
 # USAGE
 
 1. To start the application, run the following command in the terminal:
-
-  ruby app/cash_register.rb
+   ruby app/cash_register.rb
 
 Follow the prompts to enter product codes and quantities. Type 'done' when you are finished adding products to view the total price.
 
