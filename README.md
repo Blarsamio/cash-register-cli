@@ -23,7 +23,7 @@ To run the CLI Cash Register, follow these steps:
    bundle install
 
 
-# USAGE
+# Usage
 
 1. To start the application, run the following command in the terminal:
    
@@ -31,13 +31,13 @@ To run the CLI Cash Register, follow these steps:
 
 Follow the prompts to enter product codes and quantities. Type 'done' when you are finished adding products to view the total price.
 
-# FEATURES
+# Features
 
 Product Management: Add products with unique codes and prices.
 Special Offers: Apply discounts like buy-one-get-one-free for selected items.
 Flexible Pricing: Adjust pricing based on the quantity of items purchased.
 
-# CONTACT
+# Contact
 
 Patricio Pérez Herrero – patriciopherrero@gmail.com
 
