@@ -12,6 +12,7 @@ To run the CLI Cash Register, follow these steps:
 1. Clone the repository:
    
    git clone https://github.com/Blarsamio/cash-register-cli.git
+
    cd cash-register-cli
 
 2. Ensure you have Ruby installed on your machine. This application was built with Ruby 3.1.2 You can check your Ruby version using:
