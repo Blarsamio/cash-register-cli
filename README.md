@@ -25,7 +25,7 @@ To run the CLI Cash Register, follow these steps:
 
 # USAGE
 
-To start the application, run the following command in the terminal:
+1. To start the application, run the following command in the terminal:
 
   ruby app/cash_register.rb
 
