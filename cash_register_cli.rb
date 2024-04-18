@@ -35,18 +35,35 @@ class CashRegister
   end
 end
 
-def start_cash_register
-  cash_register = CashRegister.new
-  loop do
-    puts "Enter product name (or type 'done' to calculate total):"
-    name = gets.chomp
-    break if name.downcase == 'done'
+PRODUCTS = [
+  Product.new('GR1', 'Green Tea', 3.11),
+  Product.new('SR1', 'Strawberries', 5.00),
+  Product.new('CF1', 'Coffee', 11.23)
+]
 
-    puts "Enter product price(or type 'done' to calculate total):"
-    price = gets.chomp.to_f
-    cash_register.add_product(Product.new(name, price))
+def start_cash_register
+  cash_register = CashRegister.new(PRODUCTS)
+  puts 'Welcome to the Cash Register!'
+  loop do
+    display_products(cash_register)
+    input = user_input
+    break if input.downcase == 'done'
+
+    cash_register.add_product_by_code(input.upcase)
   end
   cash_register.total_price
+end
+
+def display_products(cash_register)
+  puts 'Available products:'
+  cash_register.products.each do |product|
+    puts "#{product.code} - #{product.name} - $#{format('%.2f', product.price)}"
+  end
+end
+
+def user_input
+  puts "Enter a product code to add to the cart (or type 'done' to see total):"
+  gets.chomp
 end
 
 start_cash_register
