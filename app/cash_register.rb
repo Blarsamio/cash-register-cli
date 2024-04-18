@@ -57,7 +57,7 @@ class CashRegister
     price_per_item = items.first.price
     paid_items = (quantity + 1) / 2
     total_price = paid_items * price_per_item
-    puts "Buy-one-get-one-free on Green Tea: #{quantity} for $#{format('%.2f', total_price)}"
+    puts "Buy-one-get-one-free on Green Tea: #{quantity} for $#{format('%.2f', total_price)}" if quantity.even?
     { name: 'Green Tea', quantity: quantity, total: total_price }
   end
 
@@ -65,7 +65,7 @@ class CashRegister
     quantity = items.count
     price_per_item = quantity >= 3 ? 4.50 : items.first.price
     total_price = quantity * price_per_item
-    puts "Discount on Strawberries if 3 or more: #{quantity} for $#{format('%.2f', price_per_item)} instead of $5.00"
+    puts "Discount on Strawberries if 3 or more: #{quantity} for $#{format('%.2f', price_per_item)} instead of $5.00" if quantity >= 3
     { name: 'Strawberries', quantity: quantity, total: total_price }
   end
 
@@ -73,7 +73,7 @@ class CashRegister
     quantity = items.count
     price_per_item = quantity >= 3 ? (items.first.price * 2 / 3) : items.first.price
     total_price = quantity * price_per_item
-    puts "Discount on Coffee if 3 or more: #{quantity} for $#{format('%.2f', price_per_item)} instead of $11.23"
+    puts "Discount on Coffee if 3 or more: #{quantity} for $#{format('%.2f', price_per_item)} instead of $11.23" if quantity >= 3
     { name: 'Coffee', quantity: quantity, total: total_price }
   end
 end
