@@ -11,7 +11,7 @@ To run the CLI Cash Register, follow these steps:
 
 1. Clone the repository:
    
-   git clone https://github.com/Blarsamio/cash-register-cli.git
+   gh repo clone Blarsamio/cash-register-cli
 
    cd cash-register-cli
 
