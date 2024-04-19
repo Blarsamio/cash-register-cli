@@ -15,7 +15,7 @@ To run the CLI Cash Register, follow these steps:
 
    cd cash-register-cli
 
-2. Ensure you have Ruby installed on your machine. This application was built with Ruby 3.1.2 You can check your Ruby version using:
+2. Ensure Ruby is properly installed. This application was built with Ruby 3.1.2 You can check your Ruby version using:
    
    ruby -v
 
@@ -30,7 +30,9 @@ To run the CLI Cash Register, follow these steps:
    
    ruby app/cash_register.rb
 
-Follow the prompts to enter product codes and quantities. Type 'done' when you are finished adding products to view the total price.
+Follow the prompts to select from the different options such as displaying products, adding them to the cart or removing them from the cart.
+
+Select "Checkout" options when you're finished to see the total with discounts or promotions.
 
 # Testing
 
