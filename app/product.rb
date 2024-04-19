@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Product class
 class Product
   attr_accessor :code, :name, :price

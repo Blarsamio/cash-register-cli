@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # CashRegister class
 class CashRegister
   attr_accessor :products, :cart
