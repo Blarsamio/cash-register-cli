@@ -32,6 +32,13 @@ To run the CLI Cash Register, follow these steps:
 
 Follow the prompts to enter product codes and quantities. Type 'done' when you are finished adding products to view the total price.
 
+# Testing
+
+1. For testing, this application uses Rspec, run the following command in the terminal: 
+
+   rspec spec/cash_register_spec.rb
+
+
 # Features
 
 Product Management: Add products with unique codes and prices.
