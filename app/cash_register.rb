@@ -28,6 +28,15 @@ class CashRegister
     total
   end
 
+  def remove_product_by_code(code, quantity)
+    product = products.find { |p| p.code == code }
+    if product
+      remove_product_from_cart(product, quantity)
+    else
+      puts "Product code #{code} not found."
+    end
+  end
+
   private
 
   def add_product_to_cart(product, quantity)
@@ -36,6 +45,20 @@ class CashRegister
       puts "#{quantity} #{product.name}s added. Price: $#{format('%.2f', product.price)}"
     else
       puts "#{product.name} added. Price: $#{format('%.2f', product.price)}"
+    end
+  end
+
+  def remove_product_from_cart(product, quantity)
+    items = cart.select { |p| p.code == product.code }
+    if items.count >= quantity
+      quantity.times { cart.delete_at(cart.index(items.first)) }
+      if quantity > 1
+        puts "#{quantity} #{product.name}s removed."
+      else
+        puts "#{product.name} removed."
+      end
+    else
+      puts "Not enough #{product.name}s in the cart."
     end
   end
 
