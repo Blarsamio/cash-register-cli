@@ -23,7 +23,6 @@ To run the CLI Cash Register, follow these steps:
    
    bundle install
 
-
 # Usage
 
 1. To start the application, run the following command in the terminal:
@@ -35,6 +34,10 @@ Follow the prompts to select from the different options such as displaying produ
 Select "Checkout" options when you're finished to see the total with discounts or promotions.
 
 # Testing
+
+***DEPENDENCIES***
+
+rspec for testing: Ensure that your Gemfile includes gem 'rspec' and run bundle install to set up the testing framework.
 
 1. For testing, this application uses Rspec, run the following command in the terminal: 
 
